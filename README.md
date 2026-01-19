@@ -53,3 +53,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## api folder
 - inside api folder i make a route.js name file and wirte dummy get api code for testing
 
+## adding css
+- learn that how we add css locally using module.css extension as well as tailwind
