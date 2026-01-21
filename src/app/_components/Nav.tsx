@@ -1,6 +1,9 @@
+
 import Link from "next/link"
 
+
 const Navbar = ()=>{
+   const User = false
 return (
   <header className="bg-slate-900 text-white shadow-md">
     <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -9,7 +12,7 @@ return (
       </h1></Link>
 
       <nav>
-        <ul className="flex space-x-6 text-sm md:text-base">
+       {User ? (<ul className="flex space-x-6 text-sm md:text-base">
       <Link href={'/'}>
           <li className="cursor-pointer hover:text-sky-400 transition-colors">
             Home
@@ -26,7 +29,20 @@ return (
           <li className="cursor-pointer hover:text-sky-400 transition-colors">
             About
           </li>
-        </ul>
+        </ul> ) : (
+     <ul className="flex space-x-6 text-sm md:text-base">
+      <Link href={'/login'}>
+          <li className="cursor-pointer hover:text-sky-400 transition-colors">
+            Login
+          </li>
+         </Link>
+   <Link href={'/Register'}>
+          <li className="cursor-pointer hover:text-sky-400 transition-colors">
+            Register
+          </li>
+         </Link>
+     </ul>
+   ) }
       </nav>
     </div>
   </header>
